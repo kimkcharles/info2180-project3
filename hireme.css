@@ -1,0 +1,114 @@
+/*Style the header */
+.header {    
+    background-color: #000000;
+    line-height: 45px;
+    color: #ffffff;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+/*Style the h3, h4 tag*/
+h2, h4{
+    margin: 0px 0px 0px 45px;
+}
+
+/*Style the both the left and right column*/
+.row{
+    margin: 0px 0px 0px 0px;
+}
+
+/*Style the left column*/
+.a {
+    font-weight:bold;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    height: 565px;
+    width: 25%;
+    float: left;
+    background-color: #f2f2f2;
+}
+
+/* Style buttons*/
+#btn{
+    font-weight:bold;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    text-align: left;
+    background-color: #f2f2f2; 
+    border: none; 
+    padding: 0px 0px 0px 20px;
+    font-size: 16px; 
+    cursor: pointer; 
+    margin: 0px 0px 0px 30px;
+    width:160px;
+    line-height: 70px;
+}
+
+/* Style buttons when hovered over */
+#btn:hover {
+    background-color: #1e90ff;
+    color: #ffffff;
+}
+
+/*Style the right column*/
+.b {
+    height: 560px;
+    width: 75%;
+    float: right;
+    background-color: #ffffff;
+}
+
+/*Style the form*/
+form{
+    margin: 0px 0px 0px 45px;
+    font-weight:bold;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+/*Style the avatar on the login page*/
+.avatar {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+}
+
+/*Style the input fields*/
+.input-field {
+    padding-left: 20px;
+}
+
+/*Style the text, password, telephone fields in form*/
+input[type=text], input[type=password], input[type=tel]{
+    width: 60%;
+    margin-top: 10px;
+    border-color: #f2f2f2;
+    background: #f2f2f2;
+    display: inline-block;
+    border-radius: 5px;
+    line-height: 28px;
+}
+
+/*Style the submit button*/
+input[type=submit]{
+    width: 15%;
+    border-color: #000000;
+    background-color: #000000;
+    color: #ffffff;
+    margin: 8px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    line-height: 28px;
+}
+
+/*Style the submit button when hovered over*/
+input[type=submit]:hover{
+    border-color: #000000;
+    background-color: #ffffff;
+    color: black;
+}
+
+/*Style the submit button when clicked*/
+input[type=submit]:active {
+	transform: translateY(5px);
+}
+
+
+
