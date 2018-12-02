@@ -1,4 +1,14 @@
 // JavaScript File
+/*if($_SESSION['login'] = "false"){
+    $("#test").load("login.php");
+}else if($_SESSION['login'] = "true"){
+    $("#test").load("dashboard.php");
+*/    
+$(document).ready(function(){
+    if( $('#bc').is(':empty') ) {
+    $("#bc").load("login.php");}
+});
+
 $(document).ready(function(){
     $(".btn1").click(function(){
         $("#test").load("dashboard.php");
@@ -22,3 +32,4 @@ $(document).ready(function(){
         $("#test").load("login.php");
     });
 });
+    

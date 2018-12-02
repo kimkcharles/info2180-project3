@@ -1,4 +1,5 @@
-loginForm.on('submit', function(e){
+$(document).ready(function(){
+$("#loginForm").on('submit', function(e){
         
    e.preventDefault();
    var email=$("#emailaddress").val().trim();
@@ -12,8 +13,11 @@ loginForm.on('submit', function(e){
            password:pswd
          },
          success:function(response) {
-           if(response.loggin===true){
-             $("#test").load("dashboard.php");
+          
+           if(response==="true"){
+            //   window.location.assign('hireme.html');
+                $("#test").load("dashboard.php");
+                console.log("yhh");
            }
            else{
              alert("Wrong Details");
@@ -28,4 +32,5 @@ loginForm.on('submit', function(e){
    }
   
    return false;
-}
+})
+})

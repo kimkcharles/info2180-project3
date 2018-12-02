@@ -1,13 +1,16 @@
 <?php
-$host = getenv('IP'); // get the cloud9 host IP
-$dbname = 'schema';
-$username = getenv("C9_USER"); // get cloud9 username to connect to database
-$password = '';
 
-//echo $host . ' ' . $username;
+    $servername = getenv('IP');
+    $username = getenv('C9_USER');
+    $password = "";
+    $database = "c9";
+    $dbport = 3306;
 
-try {
-    $conn = new PDO('mysql:host=' . $host . ';dbname=' . $dbname, $username, $password);
-} catch(Exception $e) {
-    die($e->getMessages());
-}
+    // Create connection
+    $db = new mysqli($servername, $username, $password, $database, $dbport);
+
+    // Check connection
+    if ($db->connect_error) {
+        die("Connection failed: " . $db->connect_error);
+    } 
+    echo "Connected successfully (".$db->host_info.")";

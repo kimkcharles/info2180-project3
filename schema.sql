@@ -1,13 +1,11 @@
 -- STILL WORKING ON IT 
 -- mysql-ctl start
 -- mysql-ctl cli
--- CREATE DATABASE schema;
--- USE schema;
 -- source schema.sql
 
-
-CREATE DATABASE schema;
-USE schema;
+DROP DATABASE IF EXISTS hireme;
+CREATE DATABASE hireme;
+USE hireme;
 
 DROP TABLE IF EXISTS users;
 CREATE TABLE users (
@@ -22,7 +20,7 @@ date_joined DATE -- 'YYYY-MM-DD'
 );
 -- ALTER TABLE users AUTO_INCREMENT=10000;
 INSERT INTO users (firstname, lastname, username, password, telephone, email, date_joined)
-VALUES ("Kim", "Kim","admin","password123", "876-444-5555","kkadmin@hireme.com", "2000-11-11");
+VALUES ("Kim", "Kim","admin","password123", "876-444-5555","admin@hireme.com", "2000-11-11");
 
 
 DROP TABLE IF EXISTS jobs;
@@ -40,7 +38,7 @@ date_posted DATE
 DROP TABLE IF EXISTS jobs_applied_for;
 CREATE TABLE jobs_applied_for (
 id INT UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
-job_id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+job_id INT UNSIGNED NOT NULL,
 user_id INT UNSIGNED NOT NULL ,
 date_applied DATE
 );
