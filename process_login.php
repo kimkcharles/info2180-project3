@@ -1,8 +1,6 @@
 <?php
 
 session_start();
-//include 'connection.php';
-
 
 
 $host = getenv('IP'); // get the cloud9 host IP
@@ -48,7 +46,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST"){
             
             
             
-            echo $_SESSION["login"];
+            echo $_SESSION["login"].$_SESSION["username"];
             //header("refresh:1; url= hireme.html");
             
         }

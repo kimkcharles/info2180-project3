@@ -5,7 +5,6 @@
          <link href="hireme.css" type="text/css" rel="stylesheet">
          <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
          <script src="hireme.js" type="text/javascript"></script>
-         <script src="login.js" type="text/javascript"></script>
          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
          <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.5.0/css/all.css'>
          <title>Hire Me</title>
@@ -16,10 +15,11 @@
             <h4>HireMe</h4>
         </div>
         
-        <div class="row">
-            <div class="column a">
+        <div class="row" id="appear">
+            <div class="column a" id="ca">
                 <br><br><button class="btn1" id="btn"><i class="fas fa-home" style="font-size:27px"></i> &nbsp; Home</button>
                 <p><button class="btn2" id="btn"><i class="fas fa-user-plus" style="font-size:27px"></i> &nbsp; Add User</button>
+                
                 <p><button class="btn3" id="btn"><i class="fas fa-briefcase-medical" style="font-size:27px"></i> &nbsp;&ensp; New Job</button>
                 <p><button class="btn4" id="btn"><i class="fas fa-power-off" style="font-size:27px"></i> &nbsp;&ensp; Log Out</button>
             </div>
@@ -35,7 +35,11 @@
                 
                 <label for="password">Password</label><br>
                 <input type="password" class="input-field" id="password" required> <input type="checkbox" title="Show password" onclick="checkBox()"><br><br>
-                <input type="submit" value="Log In">
+                <!--Hash password-->
+                <? php $password = $_POST["password"];
+                $salt = mt_rand();
+                $password = md5($salt.$password); ?>
+                <input type="submit" name="Log_in" value="Log In">
             </form>
             </div>
             <!--<?php include "dashboard.php";?>-->

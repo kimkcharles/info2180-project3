@@ -1,6 +1,6 @@
 $(document).ready(function(){
 $("#loginForm").on('submit', function(e){
-        
+   console.log($("#emailaddress"));     
    e.preventDefault();
    var email=$("#emailaddress").val().trim();
    var pswd=$("#password").val();
@@ -16,11 +16,11 @@ $("#loginForm").on('submit', function(e){
           
            if(response==="true"){
             //   window.location.assign('hireme.html');
+                $("#ca").css("visibility", "visible");
                 $("#test").load("dashboard.php");
-                console.log("yhh");
            }
            else{
-             alert("Wrong Details");
+             alert("Wrong Details enteredoo");
            }
          }
        });
